@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="744.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ca1.MainMenuController">
+    <children>
+        <ImageView fx:id="imageView" fitHeight="468.0" fitWidth="527.0" layoutX="196.0" layoutY="39.0" onMouseClicked="#convertToBlackAndWhite" pickOnBounds="true" preserveRatio="true" />
+
+    <AnchorPane layoutY="418.0" prefHeight="118.0" prefWidth="414.0">
+        <children>
+            <Label fx:id="fileName" layoutX="21.0" layoutY="14.0" text="File Name: " />
+            <Label fx:id="filePath" layoutX="21.0" layoutY="44.0" text="File Path: " />
+            <Label fx:id="fileSize" layoutX="21.0" layoutY="73.0" text="File Size: " />
+            <Label fx:id="timeStamp" layoutX="21.0" layoutY="96.0" text="Time to Convert: " />
+        </children>
+    </AnchorPane>
+      <CheckBox fx:id="convertBox" layoutX="37.0" layoutY="170.0" mnemonicParsing="false" text="Greyscale" textFill="WHITE" />
+      <Slider fx:id="brightnessSlider" blockIncrement="0.1" layoutX="3.0" layoutY="77.0" max="1.0" min="-1.0" onMouseReleased="#adjustBrightness" />
+      <Label layoutX="46.0" layoutY="60.0" text="Brightness" />
+      <Label layoutX="46.0" layoutY="91.0" text="Saturation" />
+      <Slider fx:id="saturationSlider" blockIncrement="0.1" layoutX="3.0" layoutY="108.0" max="1.0" min="-1.0" onMouseReleased="#adjustSaturation" />
+      <Slider fx:id="hueSlider" blockIncrement="0.1" layoutX="4.0" layoutY="145.0" max="1.0" min="-1.0" onMouseReleased="#adjustHue" prefHeight="14.0" prefWidth="140.0" />
+      <Label layoutX="62.0" layoutY="128.0" text="Hue" />
+      <ButtonBar layoutX="-23.0" layoutY="-6.0" prefHeight="39.0" prefWidth="314.0">
+        <buttons>
+          <Button fx:id="loadButton" mnemonicParsing="false" onAction="#fileChoose" text="Load Image" />
+            <Button fx:id="switchToRBG" mnemonicParsing="false" onAction="#switchToRBGChannels" text="RBG Channels" />
+            <Button fx:id="quit" mnemonicParsing="false" onAction="#quit" text="Quit" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="reset" layoutX="299.0" layoutY="1.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+      <CheckBox fx:id="convertBox2" layoutX="37.0" layoutY="188.0" mnemonicParsing="false" onAction="#convertToGreyscaleColorAdjust" />
+      <Label layoutX="60.0" layoutY="188.0" text="Greyscale 2:">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="197.0" text="Electric Boogaloo">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="223.0" text="Brightnes Tolerances" />
+      <Slider fx:id="brightnessToleranceSlider" blockIncrement="0.1" layoutX="2.0" layoutY="241.0" max="1.0" onMouseReleased="#adjustBrightness" value="0.2" />
+      <Label layoutX="17.0" layoutY="264.0" text="Saturation Tolerance" />
+      <Slider fx:id="saturationToleranceSlider" blockIncrement="0.1" layoutX="4.0" layoutY="282.0" max="1.0" onMouseReleased="#adjustSaturation" value="0.3" />
+      <Label layoutX="34.0" layoutY="304.0" text="Hue Tolerance" />
+      <Slider fx:id="hueToleranceSlider" blockIncrement="5.0" layoutX="2.0" layoutY="322.0" max="80.0" onMouseReleased="#adjustSaturation" value="40.0" />
+      <Button fx:id="tolerancesReset" layoutX="19.0" layoutY="345.0" mnemonicParsing="false" text="Reset Tolerances" onAction="#resetTolerances" />
+</children>
+</AnchorPane>

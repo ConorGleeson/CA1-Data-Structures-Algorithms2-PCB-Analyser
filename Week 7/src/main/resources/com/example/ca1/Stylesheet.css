@@ -1,0 +1,76 @@
+.root{
+    -fx-background-color: #9ba6b6;
+
+}
+.list-view{
+    -fx-background-color: #65687a;
+}
+.list-cell{
+    -fx-background-color: #65687a;
+    -fx-text-fill: white;
+}
+
+.list-cell:selected{
+    -fx-background-color: #9ba6b6 ;
+}
+.button{
+    -fx-background-color: #506380;
+    -fx-text-fill: white;
+}
+
+.text-field{
+    -fx-background-color: #506380;
+}
+
+.text-input {
+    -fx-text-fill: white;
+}
+
+.choice-box{
+    -fx-background-color: #506380;
+    -fx-text-fill: white;
+
+
+}
+
+.context-menu{
+    -fx-background-color: #506380;
+    -fx-text-fill: white;
+}
+
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+
+.label{
+    -fx-text-fill: white;
+}
+
+.tab-pane{
+
+
+    -fx-text-fill: white;
+}
+.tab-pane .tab{
+    -fx-background-color:  #9ba6b6;
+    -fx-text-fill: white;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #506380;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+
+.tab-pane .tab-label{
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-header-background{
+    -fx-background-color: #9ba6b6;
+}
+
+
+
+
